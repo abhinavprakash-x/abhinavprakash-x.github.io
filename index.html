@@ -1,19 +1,182 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Abhinav Prakash</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Abhinav Prakash — low-level programming, operating systems, and emulation.">
+  <meta name="theme-color" content="#070b12">
+  <title>Abhinav Prakash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Abhinav Prakash</h1>
-    <p>Computer Science student and systems programmer.</p>
+  <div class="noise"></div>
+  <header class="nav">
+    <a class="brand" href="#top"><span>&gt;_</span> Abhinav Prakash</a>
+    <nav aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#tools">Tools</a>
+      <a href="https://github.com/abhinavprakash-x" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
 
-    <h2>Projects</h2>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">HELLO, I'M</p>
+        <h1>Abhinav<br><span>Prakash.</span></h1>
+        <p class="lede">I like understanding computers <em>below the abstractions.</em></p>
+        <p class="intro">Currently building a <strong>32-bit x86 operating system</strong> from scratch and exploring systems programming, emulation, and computer architecture.</p>
+        <div class="actions">
+          <a class="button primary" href="#projects">Explore my work <span>↓</span></a>
+          <a class="button" href="https://github.com/abhinavprakash-x" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+        </div>
+      </div>
 
-    <h3>Bare Minimum OS</h3>
-    <p>A 32-bit x86 operating system built from scratch.</p>
+      <div class="terminal-wrap reveal" aria-label="Decorative terminal">
+        <div class="terminal">
+          <div class="terminal-bar"><i></i><i></i><i></i><span>abhinav@kernel:~</span></div>
+          <div class="terminal-body">
+            <p><b>$</b> whoami</p>
+            <p class="output">abhinav</p>
+            <p><b>$</b> cat current_focus</p>
+            <p class="output">Bare Minimum OS / i686</p>
+            <p><b>$</b> printf "interests\n"</p>
+            <p class="output">systems · kernels · emulation</p>
+            <p><b>$</b> uname -m</p>
+            <p class="output">i686 <span class="cursor">█</span></p>
+          </div>
+        </div>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+      </div>
+    </section>
 
-    <h3>CHIP-8 Emulator</h3>
-    <p>A CHIP-8 emulator.</p>
+    <section class="ticker" aria-label="Interests">
+      <span>C</span><i>◆</i><span>C++</span><i>◆</i><span>x86 Assembly</span><i>◆</i><span>Operating Systems</span><i>◆</i><span>Emulation</span>
+    </section>
+
+    <section id="about" class="section about reveal">
+      <div>
+        <p class="section-kicker">01 / ABOUT</p>
+        <h2>Building to understand.</h2>
+      </div>
+      <div class="about-copy">
+        <p>I'm an Information Technology student drawn to the parts of computing that are usually hidden behind layers of abstraction.</p>
+        <p>Instead of only using an operating system or emulator, I like asking what happens underneath — then trying to build it myself.</p>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-kicker">02 / SELECTED WORK</p>
+          <h2>Projects.</h2>
+        </div>
+        <p>Things I've built while learning how computers actually work.</p>
+      </div>
+
+      <article class="project featured reveal">
+        <div class="project-num">01</div>
+        <div class="project-main">
+          <div class="tags"><span>C</span><span>x86 ASM</span><span>i686</span></div>
+          <h3>Bare Minimum OS</h3>
+          <p>A 32-bit x86 operating system built from scratch — from a custom BIOS bootloader through memory management and preemptive multitasking.</p>
+          <div class="feature-grid">
+            <span>Custom BIOS bootloader</span><span>GDT, IDT & IRQ handling</span>
+            <span>Physical memory manager</span><span>Two-level paging</span>
+            <span>Dynamic kernel heap</span><span>Preemptive scheduler</span>
+            <span>Kernel threads</span><span>VGA, PS/2 & PIT drivers</span>
+          </div>
+          <a class="text-link" href="https://github.com/abhinavprakash-x/osdev" target="_blank" rel="noreferrer">View source on GitHub ↗</a>
+        </div>
+        <div class="project-art os-art" aria-hidden="true">
+          <div class="crt">
+            <div class="crt-screen">
+              <p>BARE MINIMUM OS</p>
+              <p class="dim">Initializing kernel...</p>
+              <p><span>[ OK ]</span> GDT</p>
+              <p><span>[ OK ]</span> IDT / PIC</p>
+              <p><span>[ OK ]</span> PMM / Paging</p>
+              <p><span>[ OK ]</span> Scheduler</p>
+              <p class="prompt">&gt; _</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-num">02</div>
+        <div class="project-main">
+          <div class="tags"><span>C++</span><span>SDL3</span><span>Emulation</span></div>
+          <h3>CHIP-8 Emulator</h3>
+          <p>A CHIP-8 emulator written in C++ using SDL3, with the classic instruction set, tests, and a small custom assembler.</p>
+          <div class="feature-grid chip-features">
+            <span>Classic CHIP-8 instruction set</span>
+            <span>SDL3 display & input</span>
+            <span>Custom CHIP-8 assembler</span>
+            <span>Automated tests</span>
+          </div>
+          <a class="text-link" href="https://github.com/abhinavprakash-x/CHIP-8_Emulator" target="_blank" rel="noreferrer">View source on GitHub ↗</a>
+        </div>
+        <div class="project-art chip-art" aria-label="Stylized CHIP-8 emulator">
+          <div class="chip8-machine">
+
+            <div class="chip8-header">
+              <span><i class="status-dot"></i> CHIP-8</span>
+              <span>64×32</span>
+            </div>
+
+            <div class="chip8-display">
+              <div class="pixel-grid" id="pixel-grid"></div>
+            </div>
+
+            <div class="chip8-controls">
+              <div class="chip8-keypad">
+                <span>1</span><span>2</span><span>3</span><span>C</span>
+                <span>4</span><span>5</span><span>6</span><span>D</span>
+                <span>7</span><span>8</span><span>9</span><span>E</span>
+                <span>A</span><span>0</span><span>B</span><span>F</span>
+              </div>
+
+              <div class="chip8-label">
+                <strong>CHIP-8</strong>
+                <span>EMULATOR</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="tools" class="section tools reveal">
+      <div>
+        <p class="section-kicker">03 / TOOLBOX</p>
+        <h2>What I work with.</h2>
+      </div>
+      <div class="tool-list">
+        <span>C</span><span>C++</span><span>x86 Assembly</span><span>Git</span><span>Linux</span><span>Make</span><span>SDL3</span>
+      </div>
+    </section>
+
+    <section class="section contact reveal">
+      <p class="section-kicker">04 / ELSEWHERE</p>
+      <h2>Find the code.</h2>
+      <p>The projects are the interesting part. Their repositories contain the source, documentation, and the messy trail of learning that got them working.</p>
+      <a class="button primary" href="https://github.com/abhinavprakash-x" target="_blank" rel="noreferrer">github.com/abhinavprakash-x ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Abhinav Prakash</span>
+    <span>Built with HTML, CSS & JavaScript.</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
